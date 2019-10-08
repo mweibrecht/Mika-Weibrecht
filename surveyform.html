@@ -7,51 +7,172 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>    
     <style>
-        body {text-align: center}
-        
-        #form-outer {
-            /* background-color:blue; */
+        body {
+            background-color: rgb(58, 182, 182);
+            background-color: #A9D7D1;
+            /* text-align: center; */
+            font-family:Arial, Helvetica, sans-serif;
+        }
+        h1 {
+            padding: 25px;
+        }
+        #form-outer {  
             margin: 0 auto;
+            width: 75%;
+            max-width: 900px;
+            background-color:#FAFAFA;
+            padding: 20px;
+            border-radius: 7px;
         }
         div {
             display: block;
         }
+        P {
+            display: block;
+        }
+        .labels {
+            display: inline-block;
+            text-align: right;
+            padding: 5px;
+            margin-top: 10px;
+            width: 200px;
+        }
+        .rightTab{
+            display: inline-block;
+            text-align: left;
+            vertical-align: middle;
+        }
+        .rowTab {
+            margin-bottom: 15px;
+        }
+        /* #submit {
+            border-radius: 30px;
+        } */
+        .inputfield {
+            width: 280px;
+        }
     </style>
-
     </head>
-
-
 <body>
-    <h1 class="">Survey Form</h1>
-<div id="form-outer">
-    <p id="decription">Let us know how we can improve Heroesdevelopment</p>
-    <form action="" method="get" id="survey-form">
-        <div class="rowTab"><input type="text" required placeholder="Enter your name"></div>
-        <div class="rowTab"><input type="email" required placeholder="Enter your name"></div>
-        <div class="rowTab"><input type="number"required placeholder="Enter your Age"</div>
+
+    
+    </div>
+    <h1 class="row justify-content-center">Survey Form</h1>
+    
+<div id="form-outer" class="">
+        <div class="row justify-content-center">
+                <p id="decription">Let us know how we can improve Heroesdevelopment</p>
+            </div>
 
 
+    <form action="" method="get" id="survey-form">  
+        <div class="row">
+            <div class="col-6">
+                <label for="name" id="name-label">*Name:</label>
+            </div>
+            <div class="col-6">
+                <input type="text" class="inputfield" required placeholder="Enter your name">
+            </div>
+        </div>
 
 
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <label for="email" id="email-label">*Email:</label>
+            </div>
+            <div class="col-6">
+                <input type="email" class="inputfield" required placeholder="Enter your name">
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <label for="number" id="number-label">*Age:</label>
+            </div>
+            <div class="col-6">
+                <input type="number" class="inputfield" required placeholder="Enter your Age">
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <label for="currentposition">Which option best describes your current role</label>
+            </div>
+            <div class="col-6">
+                <select name="currentPos" id="dropdown" class="dropdown">
+                    <option disabeld value="Select an option">Select an option</option>
+                    <option value="Student">Student</option>
+                    <option value="FullTimeJob">Full Time Job</option>
+                    <option value="FullTimeLearner">Full Time Learner</option>
+                    <option value="Prefernot">Prefer not to say</option>
+                    <option value="Other">Other</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <label for="recommend">How likely is that you recommend Heroesdevelopment?</label>
+            </div>
+            <div class="row col-6">
+            <ul style="list-style: none;">
+                <li>
+            <label for="Definitely">
+                <input id="Definitely" name="recommend" type="radio">Definitely</label>
+            </li>
+            <li>
+            <label for="Maybe">
+                <input id="Maybe" name="recommend" type="radio">Maybe</label>
+            </li>
+            <li>
+            <label for="Not sure">
+                <input id="Not sure" name="recommend" type="radio">Not sure</label>
+            </li>
+            </ul>
+        </div>
+        </div>
+        <div class="row justify-content-center"> 
+            <select name="mostlike" id="most-like" class="dropdown">
+            <option disabled value="Select">Select an option</option>
+            <option value="projekts">Projects</option>
+            <option value="comumnity">Comumnity</option>
+        </select>
+    </div>
 
 
+        <div class="row col-9 justify-content-center">
+            <ul style="list-style: none;">
+            <li>
+                <label>
+                <input type="checkbox" >Front-end Projects</label> 
+            </li>  
+            <li>  
+                <label>
+                <input type="checkbox">Back-end Projects</label>
+            </li>
+            <li>
+            <label>
+                <input type="checkbox">Data Visualization</label>  
+            </li> 
+            <li>    
+            <label>
+                <input type="checkbox">Videos</label>   
+            </li> 
+            <li>    
+            <label>
+                <input type="checkbox">Additional Courses</label>
+            </li>
+            </ul>
+        </div>
 
-
-
-
-
-
-        <button type="submit">Submit</button>
+        <div class="row justify-content-center">
+            <label for="comment">Any Comments or Suggestions?</label>
+            <textarea name="comment" id="comments" cols="45" rows="3"placeholder="Enter your comment here"></textarea>
+        </div>
+        <div class="row text-center col-12">
+            <button class="btn btn-primary" type="submit" id="submit">Submit</button>
+        </div>
     </form>
-
-
-
-
-
 </div>
-
-
-
-
 </body>
 </html>
